@@ -1,12 +1,7 @@
 import os
 import pymysql
 
-username = os.getenv('username')
-
-connection = pymysql.connect(host='localhost',
-                             user='username',
-                             password='passwd',
-                             database='db',)
+connection = pymysql.connect(host='localhost', user='root', passwd='', db='Chinook')
 
 try:
     with connection.cursor() as cursor:
