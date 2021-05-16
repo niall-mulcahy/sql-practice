@@ -5,7 +5,7 @@ connection = pymysql.connect(host='localhost', user='root', passwd='', db='Chino
 
 try:
     with connection.cursor() as cursor:
-        sql = "select * from Artist;"
+        sql = "select * from Employee where EmployeeId = 5;"
         cursor.execute(sql)
         result = cursor.fetchall()
         print(result)
