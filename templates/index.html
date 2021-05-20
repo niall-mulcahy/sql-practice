@@ -13,6 +13,11 @@
         <label for="LastName">Last Name</label><input type="text" name="LastName" id="LastName"> 
         <label for="Email">Email</label><input type="email" name="Email" id="Email"> 
         <input type="submit"> 
-    </form> 
+    </form>
+    
+    <div>
+        <h2>This will be a link to the display page</h2>
+        <p><a href="{{ url_for('display') }}">Here</a></p>
+    </div>
 </body>
 </html>
