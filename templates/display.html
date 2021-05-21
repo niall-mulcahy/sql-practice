@@ -8,9 +8,21 @@
 </head>
 
 <body>
-    {% for all in result %}
-    <p>{{ all }}</p>
-    {% endfor %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+        </tr>
+        {% for x in result %}
+            <tr>
+                {% for y in x %}
+                    <td>{{ y }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 
 </html>

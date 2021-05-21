@@ -34,7 +34,8 @@ def getvalue():
 def display():
     connection = pymysql.connect(host='localhost', user='root', passwd='', db='Chinook')
     with connection.cursor() as cursor:
-        cursor.execute("SELECT CustomerID, FirstName, LastName, Email from Customer where CustomerID > 65")
+        cursor.execute(
+            "SELECT CustomerID, FirstName, LastName, Email from Customer where CustomerID > 65")
         connection.commit()
         result = cursor.fetchall()
         connection.close()
