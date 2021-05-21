@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask and SQL practice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>Testing with Chinook Database</h1>
-    <h2>Inserting a First Name, Last Name, and Email values into the Customer table</h2>
-    <form method="post" action=""> 
-        <label for="FirstName">First Name</label><input type="text" name="FirstName" id="FirstName"> 
-        <label for="LastName">Last Name</label><input type="text" name="LastName" id="LastName"> 
-        <label for="Email">Email</label><input type="email" name="Email" id="Email"> 
-        <input type="submit"> 
-    </form>
-    
-    <div>
-        <h2>This will be a link to the display page</h2>
-        <p><a href="{{ url_for('display') }}">Here</a></p>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Testing with Chinook Database</h1>
+        </div>
+        <div class="row">
+            <p>Inserting a First Name, Last Name, and Email values into the Customer table</p>
+        </div>
+        <form method="post" action="">
+            <label for="FirstName">First Name: </label><input type="text" name="FirstName" id="FirstName">
+            <label for="LastName">Last Name: </label><input type="text" name="LastName" id="LastName">
+            <label for="Email">Email: </label><input type="email" name="Email" id="Email">
+            <input type="submit">
+        </form>
     </div>
 </body>
+
 </html>

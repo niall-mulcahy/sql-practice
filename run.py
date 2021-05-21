@@ -1,6 +1,6 @@
 import os
 import pymysql
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, redirect
 from datetime import datetime
 
 
@@ -27,7 +27,7 @@ def getvalue():
         cursor.execute("INSERT INTO Customer (FirstName, LastName, Email) Values (%s, %s, %s);", row)
         connection.commit()
         connection.close()
-    return render_template("index.html")
+    return redirect(url_for('display'))
 
 
 @app.route("/display")
