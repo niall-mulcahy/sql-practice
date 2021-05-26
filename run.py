@@ -7,7 +7,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-connection = pymysql.connect(host='localhost', user='root', passwd='', db='Chinook')
+id = []
 
 
 @app.route("/")
@@ -25,9 +25,16 @@ def getvalue():
         host='localhost', user='root', passwd='', db='Chinook')
     with connection.cursor() as cursor:
         cursor.execute("INSERT INTO Customer (FirstName, LastName, Email) Values (%s, %s, %s);", row)
+        id.append(cursor.lastrowid)
         connection.commit()
         connection.close()
     return redirect(url_for('display'))
+
+
+
+
+
+
 
 
 @app.route("/display")
